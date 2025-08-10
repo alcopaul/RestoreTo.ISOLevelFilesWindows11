@@ -1,12 +1,15 @@
 Restore To .ISO Level Files: Windows 11
 
 0.) Download The Windows 11 .ISO x64 Installer From Microsoft.
-1.) Create C:\WINNING And Rename dism.exe to idism.exe in the Installer Files So We're Using A Clean Dism 
+1.) Create C:\WIMMING And Rename dism.exe to idism.exe in the Installer Files So We're Using A Clean Dism 
 Executable Just In Case That What We Have Is Borked/Corrupted.
-2.) idism.exe /mount-wim /wimfile:install.wim /mountdir:C:\WINNING /index:1 (Extracts The Files To A Folder)
-3.) idism.exe /image:C:\WINNING /cleanup-image /restorehealth (<~ oye)
+2.) idism.exe /mount-wim /wimfile:install.wim /mountdir:C:\WIMMING /index:1
+3.) idism.exe /image:C:\WIMMING /cleanup-image /restorehealth
+4.) idism.exe /commit-image /mountdir:C:\WIMMING
+5.) idism.exe /commit-image /mountdir:C:\WIMMING /CheckIntegrity
+6.) idism.exe /online /cleanup-image /restorehealth /source:C:\WIMMING\Windows /limitaccess
 
-4.) Below Is The Different Versions Of The Installer In The .ISO File. (So Choose The Version That You Have)
+Below Is The Different Versions Of The Installer In The .ISO File. (So Choose The Version That You Have)
 
 /index:number
 
@@ -77,4 +80,6 @@ The operation completed successfully.
 Best Regards,
 
 ~ alCoPaUL, beth GviLLErMo [GIMO]
-August 9, 2025, NYC 11:07 AM EDT
+
+August 10, 2025, MYC 11:22 AM EDT
+First Version: August 9, 2025, NYC 11:07 AM EDT
